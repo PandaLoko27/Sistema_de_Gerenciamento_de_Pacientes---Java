@@ -73,4 +73,4 @@ Paciente adicionado com sucesso!
 
 ## Autor
 
-Otávio Guedes
+Otávio Guedes – Estudante de Engenharia de Software 🧠 💻 Foco em Back-end com Python e Java
