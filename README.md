@@ -1,4 +1,4 @@
-# Sistema de Gerenciamento de Pacientes - Clínica
+# Sistema de Gerenciamento de Pacientes - JAVA
 
 Este é um sistema simples em Java para gerenciamento de pacientes internados em uma clínica. O objetivo é facilitar a organização e o controle dos pacientes internados, permitindo adicionar, listar, atualizar e remover pacientes através de um menu interativo no console.
 
@@ -26,7 +26,7 @@ Este é um sistema simples em Java para gerenciamento de pacientes internados em
 
 1. Faça o clone do repositório:
    ```bash
-   git clone <URL-do-repositório>
+   git clone <https://github.com/PandaLoko27/Sistema_de_Gerenciamento_de_Pacientes---Java>
    ```
 
 2. Compile os arquivos `.java`:
