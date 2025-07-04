@@ -26,7 +26,7 @@ Este é um sistema simples em Java para gerenciamento de pacientes internados em
 
 1. Faça o clone do repositório:
    ```bash
-   git clone <https://github.com/PandaLoko27/Sistema_de_Gerenciamento_de_Pacientes---Java>
+   git clone <https://github.com/PandaLoko27/Sistema_de_Gerenciamento_de_Pacientes---Java>.git
    ```
 
 2. Compile os arquivos `.java`:
