@@ -1,4 +1,4 @@
-# Sistema de Gerenciamento de Pacientes - JAVA
+# 🏥 Sistema de Gerenciamento de Pacientes - JAVA
 
 Este é um sistema simples em Java para gerenciamento de pacientes internados em uma clínica. O objetivo é facilitar a organização e o controle dos pacientes internados, permitindo adicionar, listar, atualizar e remover pacientes através de um menu interativo no console.
 
