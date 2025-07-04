@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SistemaClinica {
-    private static ArrayList<Paciente> pacientes = new ArrayList<>();
+    private static ArrayList<Paciente> listaPacientes = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -33,43 +33,50 @@ public class SistemaClinica {
     private static void adicionarPaciente() {
         System.out.print("\nNome: ");
         String nome = scanner.nextLine();
+
         System.out.print("Data de nascimento (DD/MM/AAAA): ");
         String dataNascimento = scanner.nextLine();
+
         System.out.print("Telefone: ");
         String telefone = scanner.nextLine();
+
         System.out.print("Diagnóstico: ");
         String diagnostico = scanner.nextLine();
 
-        pacientes.add(new Paciente(nome, dataNascimento, telefone, diagnostico));
+        listaPacientes.add(new Paciente(nome, dataNascimento, telefone, diagnostico));
         System.out.println("\nPaciente adicionado com sucesso!");
     }
 
     private static void listarPacientes() {
-        if (pacientes.isEmpty()) {
+        if (listaPacientes.isEmpty()) {
             System.out.println("\nNenhum paciente cadastrado.");
             return;
         }
 
         System.out.println("\n--- Lista de Pacientes Internados ---");
-        for (int i = 0; i < pacientes.size(); i++) {
-            System.out.println("\nPaciente #" + (i + 1));
-            System.out.println(pacientes.get(i));
+        for (int i = 0; i < listaPacientes.size(); i++) {
+            System.out.println("Paciente #" + (i + 1));
+            System.out.println(listaPacientes.get(i));
         }
     }
 
     private static void atualizarPaciente() {
+        if (listaPacientes.isEmpty()) {
+            System.out.println("\nNenhum paciente cadastrado para atualizar.");
+            return;
+        }
+
         listarPacientes();
-        if (pacientes.isEmpty()) return;
 
         System.out.print("\nDigite o número do paciente que deseja atualizar: ");
-        int index = Integer.parseInt(scanner.nextLine()) - 1;
+        int indice = Integer.parseInt(scanner.nextLine()) - 1;
 
-        if (index < 0 || index >= pacientes.size()) {
+        if (indice < 0 || indice >= listaPacientes.size()) {
             System.out.println("\nPaciente não encontrado.");
             return;
         }
 
-        Paciente paciente = pacientes.get(index);
+        Paciente paciente = listaPacientes.get(indice);
 
         System.out.print("\nNovo nome (pressione Enter para manter: " + paciente.getNome() + "): ");
         String novoNome = scanner.nextLine();
@@ -91,18 +98,22 @@ public class SistemaClinica {
     }
 
     private static void removerPaciente() {
+        if (listaPacientes.isEmpty()) {
+            System.out.println("\nNenhum paciente cadastrado para remover.");
+            return;
+        }
+
         listarPacientes();
-        if (pacientes.isEmpty()) return;
 
         System.out.print("\nDigite o número do paciente que deseja remover: ");
-        int index = Integer.parseInt(scanner.nextLine()) - 1;
+        int indice = Integer.parseInt(scanner.nextLine()) - 1;
 
-        if (index < 0 || index >= pacientes.size()) {
+        if (indice < 0 || indice >= listaPacientes.size()) {
             System.out.println("\nPaciente não encontrado.");
             return;
         }
 
-        pacientes.remove(index);
+        listaPacientes.remove(indice);
         System.out.println("\nPaciente removido com sucesso!");
     }
 }
