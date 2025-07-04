@@ -71,6 +71,13 @@ Paciente adicionado com sucesso!
 
 ---
 
+
+## 📝 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
 ## Autor
 
 Otávio Guedes – Estudante de Engenharia de Software 🧠 💻 Foco em Back-end com Python e Java
