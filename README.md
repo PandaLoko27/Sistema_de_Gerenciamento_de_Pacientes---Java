@@ -45,8 +45,11 @@ Este é um sistema simples em Java para gerenciamento de pacientes internados em
 
 ## Estrutura do Projeto
 
-* `Paciente.java`: Classe que representa o modelo de paciente, com atributos e métodos getters/setters.
-* `SistemaClinica.java`: Classe principal que contém o menu interativo e as funcionalidades do sistema.
+````📦 sistema-clinica-java
+├── Paciente.java         # Classe que representa o paciente
+├── ClinicaService.java   # Camada de lógica do sistema
+└── SistemaClinica.java   # Menu interativo e entrada do usuário
+````
 
 ---
 
